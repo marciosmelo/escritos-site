@@ -1,0 +1,46 @@
+# Cache and temporary files
+cache/
+tmp/
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Local development
+index.php
+.env
+.env.local
+
+# SSH keys (security)
+*.pem
+*.key
+id_rsa*
+hostinger_deploy*
+
+# Backup files
+*_backup_*
+*.bak
+*.backup
+
+# Node modules (se usar)
+node_modules/
+
+# PHP dependencies
+vendor/
+
+# User specific content that shouldn't be committed
+accounts/*/
+data/notifications/
+data/flex/
+data/feed/
+
+# Local development database
+*.db
+*.sqlite

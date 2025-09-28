@@ -14,8 +14,8 @@ content:
         - '@self.children'
     limit: 5
     order:
-        by: date
-        dir: desc
+        by: folder
+        dir: asc
     pagination: true
     url_taxonomy_filters: true
 media_order: Jacques-Louis-David-Portrait-of-a-Young-Woman-in-White.jpg

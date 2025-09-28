@@ -16,7 +16,8 @@ content:
     order:
         by: folder
         dir: asc
-    pagination: true
+    pagination: false
+    limit: 0
 media_order: parque-jc.jpeg
 ---
 

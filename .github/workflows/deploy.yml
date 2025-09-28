@@ -1,0 +1,95 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+    - name: Add SSH host key
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -p 65002 147.93.38.61 >> ~/.ssh/known_hosts
+        
+    - name: Test SSH connection
+      run: |
+        ssh -p 65002 -o ConnectTimeout=10 u433986376@147.93.38.61 "pwd && ls -la"
+        
+    - name: Check remote directory structure
+      run: |
+        echo "Checking Grav user directory..."
+        ssh -p 65002 u433986376@147.93.38.61 "ls -la ~/domains/escritos.msmelo.blog/public_html/ && if [ -d '~/domains/escritos.msmelo.blog/public_html/user' ]; then echo 'user directory exists'; else echo 'user directory does not exist - will create it'; fi"
+        
+    - name: Create backup of current site
+      run: |
+        echo "Creating backup..."
+        ssh -p 65002 u433986376@147.93.38.61 "cd ~/domains/escritos.msmelo.blog/public_html/ && if [ -d 'user' ]; then cp -r user user_backup_\$(date +%Y%m%d_%H%M%S); echo 'Backup created'; else echo 'No existing user directory to backup'; fi"
+        
+    - name: Sync files to server
+      run: |
+        echo "Syncing files..."
+        rsync -avz -e "ssh -p 65002" \
+          --exclude='.git' \
+          --exclude='.github' \
+          --exclude='README.md' \
+          --exclude='screenshot.jpg' \
+          --exclude='deploy.sh' \
+          --delete \
+          ./ u433986376@147.93.38.61:~/domains/escritos.msmelo.blog/public_html/user/
+          
+    - name: Set correct permissions
+      run: |
+        echo "Setting permissions..."
+        ssh -p 65002 u433986376@147.93.38.61 "
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.md' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.yaml' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.yml' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.php' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.jpg' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.jpeg' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.png' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type f -name '*.svg' -exec chmod 644 {} \;
+          find ~/domains/escritos.msmelo.blog/public_html/user -type d -exec chmod 755 {} \;
+          echo 'Permissions set successfully'
+        "
+        
+    - name: Verify deployment
+      run: |
+        echo "Verifying deployment..."
+        ssh -p 65002 u433986376@147.93.38.61 "
+          echo 'Contents of user directory:';
+          ls -la ~/domains/escritos.msmelo.blog/public_html/user/;
+          echo '';
+          echo 'Pages directory:';
+          ls -la ~/domains/escritos.msmelo.blog/public_html/user/pages/ 2>/dev/null || echo 'Pages directory not found';
+          echo '';
+          echo 'Config directory:';
+          ls -la ~/domains/escritos.msmelo.blog/public_html/user/config/ 2>/dev/null || echo 'Config directory not found';
+        "
+        
+    - name: Clear Grav cache
+      run: |
+        echo "Clearing Grav cache..."
+        ssh -p 65002 u433986376@147.93.38.61 "
+          if [ -d '~/domains/escritos.msmelo.blog/public_html/cache' ]; then 
+            rm -rf ~/domains/escritos.msmelo.blog/public_html/cache/*;
+            echo 'Main cache cleared';
+          fi
+          if [ -d '~/domains/escritos.msmelo.blog/public_html/user/data' ]; then 
+            rm -rf ~/domains/escritos.msmelo.blog/public_html/user/data/cache/*;
+            echo 'User cache cleared';
+          fi
+        " || echo "Cache clear completed"
