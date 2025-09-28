@@ -1,5 +1,6 @@
 ---
 title: 'Capítulo 09 - Ivaldo'
+date: '2025-01-01 17:00'
 admin: {  }
 taxonomy:
     category:

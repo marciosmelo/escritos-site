@@ -1,6 +1,6 @@
 ---
 title: 'Capítulo 03 - Camila'
-date: '03-03-2025 13:12'
+date: '2025-01-01 11:00'
 ---
 
 O rádio tocava *Alceu Valença*, e sua voz marcante preenchia o carro. Camila sonhava acordada, imaginando se alguém a achava a garota mais bela da tarde, mesmo sem nunca ter ido à praia de *Boa Viagem*. O suor escorregava em seu corpo salgado, lhe fazendo cócegas. Sua irmã olhava pela janela com a tristeza de quem ainda teria que fazer duas provas de recuperação. Ela não. Havia passado direto em todas as matérias. Suor, melancolia, alegria, areia e água salgada — tudo junto e misturado. Se tivesse que escolher uma cor para os dias de verão em *Salvador*, seria laranja.

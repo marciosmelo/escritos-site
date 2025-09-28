@@ -1,4 +1,5 @@
 ---
+date: '2025-01-01 10:00'
 title: 'Capítulo 02 - André'
 admin: {  }
 published: true

@@ -1,4 +1,5 @@
 ---
+date: '2025-01-01 13:00'
 title: 'Capítulo 05 - Freitas'
 admin: {  }
 taxonomy:

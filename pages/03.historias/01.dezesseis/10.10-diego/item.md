@@ -1,5 +1,6 @@
 ---
 title: 'Capítulo 10 - Diego'
+date: '2025-01-01 18:00'
 admin: {  }
 taxonomy:
     category:

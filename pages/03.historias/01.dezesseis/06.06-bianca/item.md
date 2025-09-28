@@ -1,5 +1,6 @@
 ---
 title: 'Capítulo 06 - Bianca'
+date: '2025-01-01 14:00'
 admin: {  }
 taxonomy:
     category:

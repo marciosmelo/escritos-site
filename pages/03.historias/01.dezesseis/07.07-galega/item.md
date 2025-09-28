@@ -1,5 +1,6 @@
 ---
 title: 'Capítulo 07 - Galega'
+date: '2025-01-01 15:00'
 admin: {  }
 taxonomy:
     category:

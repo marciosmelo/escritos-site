@@ -1,5 +1,6 @@
 ---
 title: 'Capítulo 08 - Tita'
+date: '2025-01-01 16:00'
 admin: {  }
 taxonomy:
     category:
