@@ -1,6 +1,6 @@
 ---
 title: 'Capítulo 13 - Plínio'
-date: '2025-01-01 21:00'
+date: '2025-01-05 00:00'
 admin: {  }
 taxonomy:
     category:

@@ -1,6 +1,6 @@
 ---
-title: 'Capítulo 01 - Vandinha'
-date: '2025-01-01 09:00'
+title: 'Capítulo 1 - Vandinha'
+date: '2025-01-17 00:00'
 admin: {  }
 taxonomy:
     category:

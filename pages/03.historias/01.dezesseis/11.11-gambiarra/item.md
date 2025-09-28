@@ -1,6 +1,6 @@
 ---
 title: 'Capítulo 11 - Gambiarra'
-date: '2025-01-01 19:00'
+date: '2025-01-07 00:00'
 admin: {  }
 taxonomy:
     category:

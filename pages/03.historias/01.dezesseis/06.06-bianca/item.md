@@ -1,6 +1,6 @@
 ---
-title: 'Capítulo 06 - Bianca'
-date: '2025-01-01 14:00'
+title: 'Capítulo 6 - Bianca'
+date: '2025-01-12 00:00'
 admin: {  }
 taxonomy:
     category:

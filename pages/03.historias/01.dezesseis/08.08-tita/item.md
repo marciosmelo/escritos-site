@@ -1,6 +1,6 @@
 ---
-title: 'Capítulo 08 - Tita'
-date: '2025-01-01 16:00'
+title: 'Capítulo 8 - Tita'
+date: '2025-01-10 00:00'
 admin: {  }
 taxonomy:
     category:

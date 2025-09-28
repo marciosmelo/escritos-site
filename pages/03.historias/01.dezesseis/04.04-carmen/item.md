@@ -1,7 +1,13 @@
 ---
-title: 'Capítulo 04 - Carmen'
-date: '2025-01-01 12:00'
+title: 'Capítulo 4 - Carmen'
+date: '2025-01-14 00:00'
 published: true
+taxonomy:
+    category:
+        - historias
+    tag:
+        - historias
+        - salvador
 ---
 
 A polícia apareceu já era noite, quase na hora do Jornal Nacional. Dona Carmen esperou o _rabecão_ levar o corpo da garota antes de dar as caras. A mocinha trabalhava em sua casa há quatro anos. Como disseram que não havia mais ninguém na hora do ocorrido, o depoimento foi rápido e fácil de resolver. O fato de seu Freitas ser amigo pessoal do Delegado adiantou tudo, inclusive a perícia em seu apartamento realizada em menos de dez minutos. 

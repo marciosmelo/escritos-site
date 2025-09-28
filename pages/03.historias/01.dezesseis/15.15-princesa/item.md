@@ -1,6 +1,6 @@
 ---
 title: 'Capítulo 15 - Princesa'
-date: '2025-01-01 23:00'
+date: '2025-01-03 00:00'
 admin: {  }
 taxonomy:
     category:

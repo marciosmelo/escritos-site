@@ -1,6 +1,6 @@
 ---
 title: 'Capítulo 12 - Jurema'
-date: '2025-01-01 20:00'
+date: '2025-01-06 00:00'
 admin: {  }
 taxonomy:
     category:

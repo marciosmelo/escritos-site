@@ -1,6 +1,6 @@
 ---
-date: '2025-01-01 10:00'
-title: 'Capítulo 02 - André'
+date: '2025-01-16 00:00'
+title: 'Capítulo 2 - André'
 admin: {  }
 published: true
 taxonomy:

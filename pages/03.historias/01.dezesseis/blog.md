@@ -15,7 +15,7 @@ content:
     items: '@self.children'
     order:
         by: date
-        dir: asc
+        dir: desc
     pagination: false
     limit: 0
 child_type: item
