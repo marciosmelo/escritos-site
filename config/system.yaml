@@ -3,6 +3,9 @@ home:
 
 pages:
   theme: quark
+  order:
+    by: folder
+    dir: asc
   process:
     markdown: true
     twig: false

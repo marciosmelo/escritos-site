@@ -1,1 +1,5 @@
 grid-size: grid-xl
+blog-page:
+  order:
+    by: folder
+    dir: asc

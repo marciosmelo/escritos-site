@@ -14,26 +14,8 @@ admin: {  }
 content:
     items: '@self.children'
     order:
-        by: folder
+        by: date
         dir: asc
-        custom:
-            - 00.aviso-de-gatilhos
-            - 01.01-vandinha
-            - 02.02-andre
-            - 03.03-camila
-            - 04.04-carmen
-            - 05.05-freitas
-            - 06.06-bianca
-            - 07.07-galega
-            - 08.08-tita
-            - 09.09-ivaldo
-            - 10.10-diego
-            - 11.11-gambiarra
-            - 12.12-jurema
-            - 13.13-plinio
-            - 14.14-raul
-            - 15.15-princesa
-            - 16.16-saraiva
     pagination: false
     limit: 0
 child_type: item
