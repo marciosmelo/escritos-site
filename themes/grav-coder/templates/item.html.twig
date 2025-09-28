@@ -1,0 +1,59 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block body %}
+<section class="container post">
+    <article>
+        <header class="page-header">
+            <div class="page-title">
+                <h1 class="title">{{ page.title }}</h1>
+            </div>
+            <div class="page-meta">
+                <span class="posted-on">
+                    <i class="far fa-calendar"></i>
+                    <time datetime='{{ page.date|date("c") }}'>
+                        {{ page.date|date(system.pages.dateformat.short) }}
+                    </time>
+                </span>
+            </div>
+        </header>
+
+        <div class="page-content">
+            {{ page.content | raw }}
+        </div>
+
+        {# Display taxonomy details #}
+        {% if grav.theme.config.post.taxonomy %}
+        <br/>
+        {% if page.taxonomy.category %}
+            <div class="categories">
+                <i class="fas fa-folder"></i>
+                {% for category in page.taxonomy.category %}
+                   <a href="{{ site.blog.route }}/category:{{ category }}">{{ category }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if page.taxonomy.tag %}
+            <div class="tags">
+                <i class="fas fa-hashtag"></i>
+                {% for tag in page.taxonomy.tag %}
+                   <a href="{{ site.blog.route }}/tag:{{ tag }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endif %}
+
+        {# Show navigation if enabled, defaults to true #}
+        {% if grav.theme.config.post.navigation is defined %}
+            {% if grav.theme.config.post.navigation %}
+                {% include 'partials/item/navigation.html.twig' %}
+            {% endif %}
+        {% else %}
+            {% include 'partials/item/navigation.html.twig' %}
+        {% endif %}
+
+    </article>
+</section>
+
+{% endblock %}

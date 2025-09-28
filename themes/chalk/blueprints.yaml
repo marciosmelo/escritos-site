@@ -1,0 +1,196 @@
+name: Chalk
+version: 0.5.0
+description: Port of Jekyll's chalk theme to Grav
+icon: rebel
+author:
+  name: Paul Massendari
+  email: paulmassendari@pm.me
+homepage: https://github.com/paulmassen/grav-theme-chalk
+demo: 
+keywords: grav, theme, etc
+bugs: https://github.com/paulmassen/grav-theme-chalk/issues
+readme: https://github.com/paulmassen/grav-theme-chalk/blob/master/README.md
+license: MIT
+dependencies:
+    - { name: grav, version: '>=1.3.8' }
+    - { name: admin, version: '>=1.6.6' }
+    - { name: readingtime, version: '>=1.2.0' }
+    - { name: highlight, version: '>=1.4.0' }
+    - { name: taxonomylist, version: '>=1.3.1' }
+    - { name: quick-tray-links, version: '>=1.0.0' }
+
+form:
+  validation: loose
+  fields:
+    blog_theme:
+        type: toggle
+        label: Blog Theme
+        default: light
+        options:
+          dark: Dark Theme
+          light: Light Theme
+    summary_enabled:
+        type: toggle
+        label: Articles summary
+        default: off
+        highlight: "off"
+        help: "Set to on if you want to display a summary of your articles on the blog listing page"
+        options:
+          on: On
+          off: Off
+    scrollappear_enabled:
+        type: toggle
+        label: Scrollappear effet
+        default: on
+        highlight: 1
+        help: 'A simple Vanilla JS library to reveal elements on vertical scroll (1.2 KB minified and gzipped, no dependencies).'
+        validate:
+            type: bool
+        options:
+            1: "On"
+            0: "Off"
+    header_font:
+        type: toggle
+        label: Header font
+        default: cormorant
+        options:
+          lato: Lato
+          cormorant: Cormorant
+    body_width:
+        type: text
+        label: Custom body width
+        default: '' 
+    footer_text:
+        type: textarea
+        style: vertical
+        label: Footer Text
+        default: 'Chalk Theme - A Grav port of Jekyll''s Chalk theme, made by Nielsen Ramon. Grav port by <a href="https://github.com/paulmassen">Paul Massendari</a>'
+    social_section:
+        type: section
+        title: Social Links
+        text: These icons will appear on the header and on the footer of the page
+        underline: true
+    social_columns:
+        type: columns
+        fields:
+            column1:
+                type: column
+                fields:
+                    social_twitter:
+                        type: text
+                        label: Twitter ID <i class="fa fa-twitter"></i>
+                    social_facebook:
+                        type: text
+                        label: Facebook ID <i class="fa fa-facebook"></i>
+
+                    social_medium:
+                        type: text
+                        label: Medium ID <i class="fa fa-medium"></i>
+
+                    social_github:
+                        type: text
+                        label:  Github ID  <i class="fa fa-github"></i>
+
+                    social_gitlab:
+                        type: text
+                        label: Gitlab ID <i class="fa fa-gitlab"></i>
+                    social_bitbucket:
+                        type: text
+                        label: Bitbucket ID <i class="fa fa-bitbucket"></i>
+                    social_stackoverflow:
+                        type: text
+                        label: Stackoverflow ID <i class="fa fa-stack-overflow"></i>
+                    social_keybase:
+                        type: text
+                        label: Keybase ID <i class="fa fa-keybase"></i>
+                    social_docker:
+                        type: text
+                        label: Docker ID <i class="fa fa-docker"></i>
+                    social_linkedin:
+                        type: text
+                        label: Linkedin ID <i class="fa fa-linkedin"></i>
+                    social_dribbble:
+                        type: text
+                        label: Dribbble ID <i class="fa fa-dribbble"></i>
+                    social_soundcloud:
+                        type: text
+                        label: SoundCloud ID <i class="fa fa-soundcloud"></i>
+                    social_bluesky:
+                        type: text
+                        label: Bluesky ID <i class="fa fa-cloud"></i>
+                    social_telegram:
+                        type: text
+                        label: Telegram ID <i class="fa fa-telegram"></i>
+                    social_whatsapp:
+                        type: text
+                        label: WhatsApp ID <i class="fa fa-whatsapp"></i>
+                    social_goodreads:
+                        type: text
+                        label: Goodreads ID <i class="fa fa-book-reader"></i>
+                    social_researchgate:
+                        type: text
+                        label: ResearchGate ID <i class="fa fa-flask"></i>
+                    social_wechat:
+                        type: text
+                        label: WeChat ID <i class="fa fa-weixin"></i>
+
+
+
+            column2:
+                type: column
+                fields:
+                    social_spotify:
+                        type: text
+                        label: Spotify ID <i class="fa fa-spotify"></i>
+                    social_youtube:
+                        type: text
+                        label: Youtube ID <i class="fa fa-youtube"></i>
+                    social_twitch:
+                        type: text
+                        label: Twitch ID <i class="fa fa-twitch"></i>
+                    social_steam:
+                        type: text
+                        label: Steam ID <i class="fa fa-steam"></i>
+                    social_discord:
+                        type: text
+                        label: Discord ID <i class="fa fa-discord"></i>
+                    social_bitcoin:
+                        type: text
+                        label: Bitcoin Address <i class="fa fa-bitcoin"></i>
+                    social_ethereum:
+                        type: text
+                        label: Ethereum Address <i class="fa fa-ethereum"></i>
+                    social_email:
+                        type: text
+                        label: Email Address <i class="fa fa-envelope"></i>
+                    social_flickr:
+                        type: text
+                        label: Flickr ID <i class="fa fa-flicker"></i>
+                    social_instagram:
+                        type: text
+                        label: Instagram ID <i class="fa fa-instagram"></i>
+                    social_tumblr:
+                        type: text
+                        label: Tumblr ID <i class="fa fa-tumblr"></i>
+                    social_orcid:
+                        type: text
+                        label: Orcid ID <i class="fa fa-brands fa-orcid"></i>
+
+                    social_tiktok:
+                        type: text
+                        label: TikTok ID <i class="fa fa-tiktok"></i>
+                    social_mastodon:
+                        type: text
+                        label: Mastodon ID <i class="fa fa-mastodon"></i>
+                    social_threads:
+                        type: text
+                        label: Threads ID <i class="fa fa-at"></i>
+                    social_patreon:
+                        type: text
+                        label: Patreon ID <i class="fa fa-patreon"></i>
+                    social_slack:
+                        type: text
+                        label: Slack ID <i class="fa fa-slack"></i>
+                    social_xtwitter:
+                        type: text
+                        label: X / Twitter ID <i class="fa-brands fa-x-twitter"></i>

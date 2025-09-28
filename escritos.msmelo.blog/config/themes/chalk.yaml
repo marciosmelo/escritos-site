@@ -1,0 +1,45 @@
+enabled: true
+blog_theme: light
+dropdown:
+  enabled: true
+scrollappear_enabled: true
+summary_enabled: 'on'
+header_font: cormorant
+body_width: null
+footer_text: 'Escritos - MSMelo.Blog - Histórias, Contos e Noveletas por <a href="https://msmelo.blog">Marcio Melo</a>'
+social_twitter: null
+social_facebook: null
+social_medium: null
+social_github: marciosmelo
+social_gitlab: null
+social_bitbucket: null
+social_stackoverflow: null
+social_keybase: null
+social_docker: null
+social_linkedin: null
+social_dribbble: null
+social_soundcloud: null
+social_bluesky: marciosmelo
+social_telegram: marciosmelo
+social_whatsapp: null
+social_goodreads: null
+social_researchgate: null
+social_wechat: null
+social_spotify: null
+social_youtube: null
+social_twitch: null
+social_steam: null
+social_discord: null
+social_bitcoin: null
+social_ethereum: null
+social_email: marciomelo@gmail.com
+social_flickr: mmelo
+social_instagram: marciosmelo
+social_tumblr: null
+social_orcid: null
+social_tiktok: null
+social_mastodon: 'https://bolha.one/@msmelo'
+social_threads: null
+social_patreon: null
+social_slack: null
+social_xtwitter: null

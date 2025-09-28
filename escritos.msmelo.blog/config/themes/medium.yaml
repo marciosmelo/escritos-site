@@ -1,0 +1,6 @@
+enabled: true
+default_lang: pt
+infinite_scroll: true
+analytics: UA-YOURCODE
+social:
+  twitter: null

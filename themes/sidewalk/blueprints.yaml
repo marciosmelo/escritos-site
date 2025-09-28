@@ -1,0 +1,16 @@
+name: Sidewalk
+version: 0.0.6
+description: "A simple and content first theme for Grav CMS"
+icon: rocket
+author:
+  name: Darryl Dias
+  email: dev@darryldias.me
+  url: http://darryldias.me
+homepage: https://github.com/DarrylDias/Sidewalk
+keywords: sidewalk, clean, simple, blog, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/DarrylDias/Sidewalk/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:

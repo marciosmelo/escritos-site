@@ -1,0 +1,42 @@
+enabled: true
+dropdown:
+  enabled: true
+navbar:
+  title: 'Escritos - M.S.Melo'
+  auth_link:
+    enabled: false
+    login_slug: login
+    login_label: Login
+footer:
+  copyright: 'M.S.Melo'
+social:
+  site:
+    title: Homesite
+    url: https://msmelo.blog
+    icon: fab fa-firefox
+    rel: me
+  mastodon:
+    title: Mastodon
+    url: https://bolha.one/@msmelo
+    icon: fab fa-mastodon
+    rel: me
+  # bluesky:
+  #   title: Bluesky
+  #   url: https://bsky.app/profile/marciosmelo.bsky.social
+  #   icon: fab bluesky
+  #   rel: me
+  instagram:
+    title: Instagram
+    url: https://bsky.app/profile/marciosmelo.bsky.social
+    icon: fab fa-instagram
+    rel: me
+  flickr:
+    title: Flickr
+    url: https://www.flickr.com/photos/mmelo/
+    icon: fab fa-flickr
+    rel: me
+post:
+  navigation: true
+  taxonomy: true
+pagination:
+  count: 10

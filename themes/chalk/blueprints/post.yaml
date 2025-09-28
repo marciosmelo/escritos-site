@@ -1,0 +1,37 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.headline:
+              type: text
+              label: A few words to describe the topic of this post
+              style: vertical
+              ordering@: header.title
+            header.taxonomy:
+              type: taxonomy
+              label: PLUGIN_ADMIN.TAXONOMY
+              multiple: true
+              validate:
+                type: array
+              ordering@: header.headline
+        options:
+          fields:
+            taxonomies:
+              type: section
+              ordering@: header.title
+              title: PLUGIN_ADMIN.TAXONOMIES
+              underline: true
+              unset@: true
+
+              fields:
+                header.taxonomy:
+                  type: taxonomy
+                  unset@: true
+                  label: PLUGIN_ADMIN.TAXONOMY
+                  multiple: true
+                  validate:
+                    type: array

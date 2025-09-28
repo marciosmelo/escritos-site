@@ -1,0 +1,21 @@
+state: enabled
+email: marciomelo@gmail.com
+fullname: 'Marcio Melo'
+hashed_password: $2y$10$bIJRkQCU17ZATtj/mLjZ6OmNhdlVeIMOowLSC2mt6CswwnY3q9a2u
+language: pt
+content_editor: default
+twofa_enabled: false
+twofa_secret: T6453WQVPTVQHQKACHLFS2I3AVDB6ZEO
+avatar:
+  user/accounts/avatars/hswwlodykbmfxpe.jpg:
+    name: hswwlodykbmfxpe.jpg
+    type: image/jpeg
+    size: 29432
+    path: user/accounts/avatars/hswwlodykbmfxpe.jpg
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: true
+    cache: true

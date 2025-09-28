@@ -1,0 +1,18 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+        {% include 'partials/navigation.html.twig' %}
+          <section id="body">
+            <div class="wrapper padding">
+                <h1 style="text-align: center;padding-top:100px; padding-bottom:80px;"><i class="fa fa-hashtag"></i>{{ page.title }}</h1>
+               {{ page.content | raw }}
+               {% include 'partials/taxonomylist.html.twig' with {route_url: my_url, taxonomy: 'tag'} %}
+
+            </div>
+          </section>
+
+{% include 'partials/footer.html.twig' %}
+
+{% endblock %}
+
+

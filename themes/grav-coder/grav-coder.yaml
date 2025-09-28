@@ -1,0 +1,21 @@
+enabled: true
+dropdown:
+  enabled: true
+navbar:
+  title: Grav Coder
+  auth_link:
+    enabled: false
+    login_slug: login
+    login_label: Login
+footer:
+  copyright: Grav Coder
+post:
+  navigation: true
+  taxonomy: true
+# listing_title:
+#   taxonomy:
+#     category: 'Category: '
+#     tag: 'Tag: '
+#   blogs: 'Posts'
+pagination:
+  count: 10

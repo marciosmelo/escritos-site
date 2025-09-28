@@ -1,0 +1,14 @@
+enabled: true
+production-mode: true
+grid-size: grid-lg
+header-fixed: false
+header-animated: false
+header-dark: true
+header-transparent: false
+sticky-footer: true
+blog-page: /blog
+spectre:
+  exp: false
+  icons: false
+custom_logo: {  }
+custom_logo_mobile: {  }

@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1739143420
+count: 1
+index:
+  msmelo:
+    storage_key: msmelo
+    storage_timestamp: 1739143420
+    key: msmelo
+    email: marciomelo@gmail.com

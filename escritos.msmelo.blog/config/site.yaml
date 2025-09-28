@@ -1,0 +1,23 @@
+title: 'Escritos - MSMelo.Blog'
+default_lang: pt-br
+author:
+  name: 'Marcio Melo'
+  email: marciomelo@gmail.com
+taxonomies:
+  - category
+  - tag
+  - month
+metadata:
+  description: 'Escritos, contos, histórias e textos por Marcio Melo'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects:
+  /changelog: /blog/the-urban-jungle
+routes:
+  /something/else: /blog/focus-and-blur
+  '/another/one/(.*)': /blog/$1
+blog:
+  route: ''

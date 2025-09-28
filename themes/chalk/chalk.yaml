@@ -1,0 +1,5 @@
+enabled: true
+blog_theme: light
+dropdown:
+  enabled: true
+scrollappear_enabled: true

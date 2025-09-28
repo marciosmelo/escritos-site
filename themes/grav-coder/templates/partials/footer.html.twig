@@ -1,0 +1,25 @@
+<section class="container centered">
+  <div class="about">
+    <ul>
+      {% for type, meta in theme_config.social %}
+        <li>
+          <a href="{{ meta.url }}" {% if meta.rel %}rel="{{ meta.rel }}" {% endif %}class="btn btn-link" title="{{ meta.title }}">
+            <i class="{{ meta.icon }}"></i>
+          </a>
+          {% if loop.last == false %}
+            <span class="separator">•</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<section class="container">
+  <span class="copyright">
+    ©
+    {% if theme_config.footer.copyright_start_year %}
+      {{ theme_config.footer.copyright_start_year }} -
+    {% endif %}
+    {{ "now"|date("Y") }} <a href="{{ home_url }}">{{ theme_config.footer.copyright }}</a>
+  </span>
+</section>
