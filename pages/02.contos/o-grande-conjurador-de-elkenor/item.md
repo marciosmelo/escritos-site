@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - prosas
         - fantasia
+date: '01-06-2024 10:00'
 ---
 
 Shekaar dominava as artes ocultas da magia com a mesma maestria dos maiores conjuradores de Elkenor. Não era de nenhuma das cinco famílias mais importantes do reino, não tinha herdado nenhum item mágico ancestral e tampouco frequentou as escolas arcanas. Ele era um excelente feiticeiro apenas porque, um dia, aceitando o conselho de seu falecido pai Shidraar, o Barão das Minas Baki, decidiu ser.

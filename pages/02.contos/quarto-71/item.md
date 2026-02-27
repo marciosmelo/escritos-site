@@ -1,5 +1,6 @@
 ---
 title: 'Quarto 71'
+date: '01-01-2024 10:00'
 ---
 
 De extraordinária aquela espelunca não tinha **porra de nada**. Era só um prédio antigo, recauchutado com tinta fosca por baixo de uma demão armengada. O recepcionista segurava as pálpebras dos olhos num esforço que enrugava seu rosto. Aquele _cara de fuinha_ forçava um sorriso mais falso que o _extraordinário_ que precedia a fachada do estabelecimento. A chave do** quarto 71** foi jogada com indiferença. Memorizei a direção que ele gesticulou de forma vaga e segui até o corredor que levava aos quartos do andar térreo. Os mais baratos. Ele sequer ofereceu ajuda com minha mochila, o que me privou de recusar sua gentileza. *Um dos meus esportes favoritos.*

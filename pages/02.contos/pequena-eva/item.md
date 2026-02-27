@@ -11,6 +11,7 @@ taxonomy:
 metadata:
     autor: 'Marcio Melo'
 media_order: pequena-eva.jpg
+date: '27-02-2026 17:34'
 process:
     markdown: true
     twig: false
