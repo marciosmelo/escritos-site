@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ if and (in (slice "contos" "dezesseis" "blog") .Type) (not .Params.menu) }}
+<h1>{{ .Title }}</h1>
+{{ with .Date }}
+{{ if not $.Date.IsZero }}
+<p>
+  <i>
+    <time datetime='{{ .Format "2006-01-02" }}'>
+      {{ .Format (default "02 Jan 2006" $.Site.Params.dateFormat) }}
+    </time>
+  </i>
+</p>
+{{ end }}
+{{ end }}
+{{ end }}
+<content>
+  {{ .Content }}
+</content>
+
+{{ if and (in (slice "contos" "dezesseis" "blog") .Type) (.Param "enablePostNavigator") }}
+{{- partial "post_navigator.html" . -}}
+{{ end }}
+
+{{ with .GetTerms "tags" }}
+<p>
+  {{ range . }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
+{{ end }}

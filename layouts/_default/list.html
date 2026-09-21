@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ if .Content }}
+<content>
+  {{ .Content }}
+</content>
+{{ end }}
+
+{{/* Hub de narrativas (ex.: /historias/) — lista séries */}}
+{{ if gt (len .Sections) 0 }}
+<ul class="series-list">
+  {{ range .Sections.ByTitle }}
+  <li class="series-item">
+    <p class="series-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ with .Params.summary }}
+    <p class="series-blurb">{{ . }}</p>
+    {{ else }}
+      {{ with .Summary }}
+      <p class="series-blurb">{{ . | plainify | truncate 220 }}</p>
+      {{ end }}
+    {{ end }}
+    <p class="series-cta"><a href="{{ .Permalink }}">Começar a ler →</a></p>
+  </li>
+  {{ end }}
+</ul>
+
+{{ else }}
+{{/* Lista de textos: contos, capítulos, etc. */}}
+{{ if .Data.Singular }}
+  <h3 style="margin-bottom:0">Filtrando por "{{ .Title }}"</h3>
+  <small>
+    <a href="{{ "contos" | relURL }}">Remover filtro</a>
+  </small>
+{{ end }}
+{{ $pages := .RegularPages.ByDate.Reverse }}
+{{ if .RegularPages.ByWeight }}
+  {{/* Preferir ordem por weight quando os textos têm weight (capítulos) */}}
+  {{ $weighted := where .RegularPages "Weight" "gt" 0 }}
+  {{ if gt (len $weighted) 0 }}
+    {{ $pages = .RegularPages.ByWeight }}
+  {{ end }}
+{{ end }}
+<ul class="blog-posts">
+  {{ range $pages }}
+  <li>
+    {{ if not .Date.IsZero }}
+    <span>
+      <i>
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>
+          {{ .Date.Format (default "02 Jan 2006" $.Site.Params.dateFormat) }}
+        </time>
+      </i>
+    </span>
+    {{ else }}
+    <span></span>
+    {{ end }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ else }}
+  <li>Nada por aqui ainda.</li>
+  {{ end }}
+</ul>
+{{ if and (not .Data.Singular) .Site.Taxonomies.tags }}
+<small>
+  <div>
+    {{ range .Site.Taxonomies.tags }}
+    <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+    {{ end }}
+  </div>
+</small>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,10 @@
+<p class="site-footer-links">
+  <a href="https://msmelo.blog">msmelo.blog</a>
+  ·
+  <a href="{{ "index.xml" | relURL }}">rss</a>
+  ·
+  <a href="mailto:marciomelo@gmail.com">e-mail</a>
+</p>
+{{ if not (.Param "hideMadeWithLine") }}
+<p class="site-footer-credit">Feito com <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a></p>
+{{ end }}
