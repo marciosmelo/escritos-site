@@ -1,0 +1,12 @@
+<div style="font-size:0.85em;display:flex;gap:1rem;justify-content:space-between;margin-top:2.5rem;padding-top:1rem;border-top:1px dashed color-mix(in srgb, var(--text-color) 30%, transparent);font-family:var(--font-ui);">
+  <p style="margin:0">
+    {{ with .PrevInSection }}
+    <a href="{{ .Permalink }}">← {{ .Title }}</a>
+    {{ end }}
+  </p>
+  <p style="margin:0">
+    {{ with .NextInSection }}
+    <a href="{{ .Permalink }}">{{ .Title }} →</a>
+    {{ end }}
+  </p>
+</div>

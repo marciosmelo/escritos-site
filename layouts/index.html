@@ -1,0 +1,48 @@
+{{ define "main" }}
+<content class="home-lead">
+  {{ .Content }}
+</content>
+
+<section class="home-section" aria-labelledby="contos-heading">
+  <h2 id="contos-heading">Contos e prosas curtas</h2>
+  <ul class="blog-posts">
+    {{ range (where .Site.RegularPages "Section" "contos").ByDate.Reverse }}
+    <li>
+      <span>
+        <i>
+          <time datetime='{{ .Date.Format "2006-01-02" }}'>
+            {{ .Date.Format (default "02 Jan 2006" $.Site.Params.dateFormat) }}
+          </time>
+        </i>
+      </span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ else }}
+    <li>Nada publicado ainda.</li>
+    {{ end }}
+  </ul>
+</section>
+
+<section class="home-section home-series" aria-labelledby="narrativas-heading">
+  <h2 id="narrativas-heading">Narrativas</h2>
+  <ul class="series-list">
+    {{ with .Site.GetPage "historias" }}
+      {{ range .Sections.ByTitle }}
+      <li class="series-item">
+        <p class="series-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+        {{ with .Params.summary }}
+        <p class="series-blurb">{{ . }}</p>
+        {{ else }}
+          {{ with .Summary }}
+          <p class="series-blurb">{{ . | plainify | truncate 180 }}</p>
+          {{ end }}
+        {{ end }}
+        <p class="series-cta"><a href="{{ .Permalink }}">Começar a ler →</a></p>
+      </li>
+      {{ else }}
+      <li>Nenhuma narrativa em capítulos ainda.</li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

@@ -1,0 +1,48 @@
+baseURL = "https://escritos.msmelo.blog/"
+theme = "hugo-bearblog"
+title = "Escritos - M.S.Melo"
+author = "Marcio Melo"
+copyright = "© Marcio Melo"
+defaultContentLanguage = "pt-br"
+enableRobotsTXT = true
+summaryLength = 40
+
+[languages]
+  [languages.pt-br]
+    locale = "pt-BR"
+    label = "Português"
+    weight = 1
+    title = "Escritos - M.S.Melo"
+    [languages.pt-br.params]
+      description = "Contos, prosas e narrativas de M. S. Melo"
+
+[pagination]
+  pagerSize = 20
+
+[permalinks]
+  contos = "/contos/:slug/"
+  dezesseis = "/historias/dezesseis/:slug/"
+
+[params]
+  description = "Contos, prosas e narrativas de M. S. Melo"
+  title = "Escritos - M.S.Melo"
+  authorName = "M. S. Melo"
+  homeUrl = "https://msmelo.blog"
+  favicon = "images/favicon.png"
+  images = ["images/share.png"]
+  hideMadeWithLine = false
+  enablePostNavigator = true
+  dateFormat = "02 Jan 2006"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "friendly"
+    lineNos = false
+    codeFences = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

@@ -1,15 +1,37 @@
-# Grav Blog Site Skeleton
+# Escritos
 
-The *Blog Site* skeleton is a [Grav](http://github.com/getgrav/grav) skeleton and includes a *user* folder giving an example of a blog set up using Grav.
+Site de contos e histórias de [Marcio Melo](https://msmelo.blog) — [escritos.msmelo.blog](https://escritos.msmelo.blog).
 
-# Installation
+Migrado do Grav para **Hugo** + tema [hugo-bearblog](https://github.com/janraasch/hugo-bearblog), com tipografia voltada à leitura.
 
-To install this package, you will essentially be replacing the default `user` folder with the skeleton. To do this, download the zip version of this repository and unzip it under `/your/site/grav/`. Then, rename the folder to `user`. 
+## Desenvolvimento
 
-If a user folder already exists, back up the folder to a safe place, delete it (if there is no custom content in it you wish to keep) or replace its contents with the files in the unzipped folder.
+```bash
+git submodule update --init --recursive
+hugo server -D
+```
 
-You should now have all the skeleton files under
+Build de produção:
 
-	/your/site/grav/user/
+```bash
+hugo --minify
+```
 
->> NOTE: This skeleton is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate. If you download this skeleton as part of a pre-assembled package from [GetGrav.org](http://getgrav.org/downloads/skeletons#extras), you should have everything you need to get started.
+A saída fica em `public/`.
+
+## Conteúdo
+
+| Pasta | O quê |
+|-------|--------|
+| `content/contos/` | Contos |
+| `content/historias/dezesseis/` | Narrativa *Dezesseis* (capítulos) |
+
+Cada texto é um page bundle (`index.md` + imagens opcionais).
+
+## Deploy
+
+O script `deploy.sh` envia o conteúdo de `public/` para a Hostinger (HTML estático).
+
+```bash
+./deploy.sh --deploy
+```
