@@ -1,11 +1,8 @@
 ---
-title: Home
-menu:
-  main:
-    name: Home
-    weight: 1
+title: Saiu do ar
 ---
 
-<span class="home-emoji" aria-hidden="true">✎ ～～～</span>
+Esse canto fechou.
 
-Contos, prosas curtas e narrativas longas — o que eu escrevo quando a história não pede licença.
+A newsletter e a casa literária: [msmelo.art.br](https://msmelo.art.br/)  
+O diário: [msmelo.blog](https://msmelo.blog)

@@ -1,6 +1,6 @@
 baseURL = "https://escritos.msmelo.blog/"
 theme = "hugo-bearblog"
-title = "Escritos - M.S.Melo"
+title = "Escritos — saiu do ar"
 author = "Marcio Melo"
 copyright = "© Marcio Melo"
 defaultContentLanguage = "pt-br"
@@ -12,9 +12,9 @@ summaryLength = 40
     locale = "pt-BR"
     label = "Português"
     weight = 1
-    title = "Escritos - M.S.Melo"
+    title = "Escritos — saiu do ar"
     [languages.pt-br.params]
-      description = "Contos, prosas e narrativas de M. S. Melo"
+      description = "Esse canto fechou. A casa literária é msmelo.art.br."
 
 [pagination]
   pagerSize = 20
@@ -24,8 +24,8 @@ summaryLength = 40
   dezesseis = "/historias/dezesseis/:slug/"
 
 [params]
-  description = "Contos, prosas e narrativas de M. S. Melo"
-  title = "Escritos - M.S.Melo"
+  description = "Esse canto fechou. A casa literária é msmelo.art.br."
+  title = "Escritos — saiu do ar"
   authorName = "M. S. Melo"
   homeUrl = "https://msmelo.blog"
   favicon = "images/favicon.png"
