@@ -14,11 +14,12 @@ Marcio Melo é baiano de Conceição do Almeida, engenheiro de software por prof
 
 **Escritos** é onde eu junto a ficção: contos, prosas curtas e narrativas em capítulos. Um lugar só pra histórias, pra ler no silêncio que cada texto pedir.
 
-O resto da conversa — diário, causos, o dia a dia — fica no [msmelo.blog](https://msmelo.blog).
+O resto da conversa — diário, causos, o dia a dia — fica no [msmelo.blog](https://msmelo.blog). A newsletter **Imagina Só**, os livros e o autor moram em [msmelo.art.br](https://msmelo.art.br/).
 
 ### Por aí
 
 - Casa — [msmelo.blog](https://msmelo.blog)
+- Newsletter — [msmelo.art.br](https://msmelo.art.br/)
 - RSS — [/index.xml](/index.xml)
 - E-mail — [marciomelo@gmail.com](mailto:marciomelo@gmail.com)
 - Fediverso — [@msmelo@bolha.one](https://bolha.one/@msmelo)
